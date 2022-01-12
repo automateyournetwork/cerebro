@@ -1,0 +1,12 @@
+# {{ singlePerson.name }}
+## Alias: {{ singlePerson.alias }}
+## Description: {{ singlePerson.description }}
+## Powers:
+{%-     for power in singlePerson.powers if power | length > 1 %}
+### {{ power }}
+{%-     else %}
+### {{ singlePerson.powers }}
+{%-     endfor %}
+## [Image]({{ singlePerson.img }})
+## Affiliation: {{ singlePerson.affiliation }}
+## Created: {{ singlePerson.created }}

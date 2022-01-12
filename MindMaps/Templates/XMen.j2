@@ -1,0 +1,24 @@
+# X-Men: The Animated Series
+## Characters
+{%- for person in peoplePersonList %}
+### {{ person.name }}
+#### Alias: {{ person.alias }}
+#### Description: {{ person.description }}
+#### Powers:
+{%-     for power in person.powers if power | length > 1 %}
+##### {{ power }}
+{%-     else %}
+##### {{ person.powers }}
+{%-     endfor %}
+#### [Image]({{ person.img }})
+#### Affiliation: {{ person.affiliation }}
+#### Created: {{ person.created }}
+{%- endfor %}
+## Episodes
+{%- for episode in episodeEpisodeList %}
+### {{ episode.title }}
+#### Number: {{ episode.number }}
+#### Air Date: {{ episode.air_date }}
+#### Plot: {{ episode.plot }}
+#### Created: {{ episode.created }}
+{%- endfor %}
